@@ -18,6 +18,9 @@ var connection = mysql.createConnection({
   database: "users",
 });
 
+// TODO: Get these configs from env
+
+
 connection.connect(function (err) {
   if (err) throw err;
   console.log("Connected!");

@@ -15,7 +15,7 @@ const AuthForm = ({ handleScreen }: AuthProps) => {
   return (
     <>
       {isSigningUp ? (
-        <SignupForm handleIsSigningUp={handleIsSigningUp} />
+        <SignupForm changeAuthForm={handleIsSigningUp} />
       ) : (
         <SigninForm
           handleScreen={handleScreen}

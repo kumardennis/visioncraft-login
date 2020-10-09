@@ -5,7 +5,7 @@ import { BsArrowBarRight } from "react-icons/bs";
 import "./styles.scss";
 
 interface SignupFormProps {
-  handleIsSigningUp: () => void;
+  changeAuthForm: () => void;
 }
 
 interface SignupData {
@@ -20,7 +20,7 @@ interface Response {
   message: string;
 }
 
-const SignupForm = ({ handleIsSigningUp }: SignupFormProps) => {
+const SignupForm = ({ changeAuthForm }: SignupFormProps) => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -72,7 +72,7 @@ const SignupForm = ({ handleIsSigningUp }: SignupFormProps) => {
         .then((response) => response.json())
         .then((data: Response) => {
           alert(data.message);
-          data.type === "success" && handleIsSigningUp();
+          data.type === "success" && changeAuthForm();
         })
         .catch((err: Error) => alert(err));
     }
@@ -141,7 +141,7 @@ const SignupForm = ({ handleIsSigningUp }: SignupFormProps) => {
         Use of this service is subject to terms and conditions.
       </div>
 
-      <button onClick={handleIsSigningUp} className="change-auth-screen">
+      <button onClick={changeAuthForm} className="change-auth-screen">
         Take me to Sign In! <BsArrowBarRight />
       </button>
     </div>

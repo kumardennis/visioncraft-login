@@ -7,7 +7,7 @@ configure({ adapter: new Adapter() });
 
 describe("Signup Form", () => {
   it("should render SignupForm", () => {
-    const signupForm = shallow(<SignupForm handleIsSigningUp={() => {}} />);
+    const signupForm = shallow(<SignupForm changeAuthForm={() => {}} />);
     expect(signupForm).toMatchSnapshot();
   });
 });
@@ -16,7 +16,7 @@ describe("Inputs for SignupForm", () => {
   let wrapper;
 
   test("Render firstName check", () => {
-    wrapper = mount(<SignupForm handleIsSigningUp={() => {}} />);
+    wrapper = mount(<SignupForm changeAuthForm={() => {}} />);
     const handleInput = jest.fn();
 
     const firstNametInput = wrapper
@@ -27,7 +27,7 @@ describe("Inputs for SignupForm", () => {
   });
 
   test("Render lastName check", () => {
-    wrapper = mount(<SignupForm handleIsSigningUp={() => {}} />);
+    wrapper = mount(<SignupForm changeAuthForm={() => {}} />);
     const handleInput = jest.fn();
 
     const lastNametInput = wrapper
@@ -38,7 +38,7 @@ describe("Inputs for SignupForm", () => {
   });
 
   test("Render email check", () => {
-    wrapper = mount(<SignupForm handleIsSigningUp={() => {}} />);
+    wrapper = mount(<SignupForm changeAuthForm={() => {}} />);
     const handleInput = jest.fn();
 
     const emailInput = wrapper
@@ -49,7 +49,7 @@ describe("Inputs for SignupForm", () => {
   });
 
   test("Render password check", () => {
-    wrapper = mount(<SignupForm handleIsSigningUp={() => {}} />);
+    wrapper = mount(<SignupForm changeAuthForm={() => {}} />);
     const handleInput = jest.fn();
 
     const passwordInput = wrapper

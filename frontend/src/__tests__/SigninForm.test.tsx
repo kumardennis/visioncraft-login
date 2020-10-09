@@ -8,7 +8,7 @@ configure({ adapter: new Adapter() });
 describe("Signin Form", () => {
   it("should render SignupForm", () => {
     const signinForm = shallow(
-      <SigninForm handleIsSigningUp={() => {}} handleScreen={() => {}} />
+      <SigninForm changeAuthForm={() => {}} handleScreen={() => {}} />
     );
     expect(signinForm).toMatchSnapshot();
   });
@@ -19,7 +19,7 @@ describe("Inputs for SigninForm", () => {
 
   test("Render email check", () => {
     wrapper = mount(
-      <SigninForm handleIsSigningUp={() => {}} handleScreen={() => {}} />
+      <SigninForm changeAuthForm={() => {}} handleScreen={() => {}} />
     );
 
     const emailInput = wrapper
@@ -31,7 +31,7 @@ describe("Inputs for SigninForm", () => {
 
   test("Render password check", () => {
     wrapper = mount(
-      <SigninForm handleIsSigningUp={() => {}} handleScreen={() => {}} />
+      <SigninForm changeAuthForm={() => {}} handleScreen={() => {}} />
     );
 
     const passwordInput = wrapper

@@ -32,7 +32,7 @@ app.use(cors()); // Use this after the variable declaration
 
 app.use(bodyParser.json());
 
-// Schema for password and validations
+// Schema for password and GENERALLY SECURE validations
 let schema = new passwordValidator();
 
 schema

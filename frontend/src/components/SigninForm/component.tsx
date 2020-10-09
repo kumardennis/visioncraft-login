@@ -5,7 +5,7 @@ import { BsArrowBarLeft } from "react-icons/bs";
 import "./styles.scss";
 
 type SigninFormProps = {
-  handleIsSigningUp: () => void;
+  changeAuthForm: () => void;
   handleScreen: () => void;
 };
 
@@ -19,7 +19,7 @@ interface Response {
   message: string;
 }
 
-const SigninForm = ({ handleIsSigningUp, handleScreen }: SigninFormProps) => {
+const SigninForm = ({ changeAuthForm, handleScreen }: SigninFormProps) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [signinData, setSigninData] = useState<SigninData | {}>({});
@@ -105,7 +105,7 @@ const SigninForm = ({ handleIsSigningUp, handleScreen }: SigninFormProps) => {
         Use of this service is subject to terms and conditions.
       </div>
 
-      <button onClick={handleIsSigningUp} className="change-auth-screen">
+      <button onClick={changeAuthForm} className="change-auth-screen">
         <BsArrowBarLeft /> Take me to Sign Up!
       </button>
     </div>

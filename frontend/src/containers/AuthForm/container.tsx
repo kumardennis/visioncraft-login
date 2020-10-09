@@ -9,17 +9,17 @@ type AuthProps = {
 const AuthForm = ({ handleScreen }: AuthProps) => {
   const [isSigningUp, setIsSigningUp] = useState(true);
 
-  const handleIsSigningUp = () => {
+  const changeAuthForm = () => {
     setIsSigningUp(!isSigningUp);
   };
   return (
     <>
       {isSigningUp ? (
-        <SignupForm changeAuthForm={handleIsSigningUp} />
+        <SignupForm changeAuthForm={changeAuthForm} />
       ) : (
         <SigninForm
           handleScreen={handleScreen}
-          handleIsSigningUp={handleIsSigningUp}
+          changeAuthForm={changeAuthForm}
         />
       )}
     </>

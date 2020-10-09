@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Inputs for SignupForm Render email check 1`] = `ReactWrapper {}`;
+
+exports[`Inputs for SignupForm Render firstName check 1`] = `ReactWrapper {}`;
+
+exports[`Inputs for SignupForm Render lastName check 1`] = `ReactWrapper {}`;
+
+exports[`Inputs for SignupForm Render password check 1`] = `ReactWrapper {}`;
+
+exports[`Signup Form should render SignupForm 1`] = `ShallowWrapper {}`;

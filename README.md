@@ -16,7 +16,7 @@ Used database is MySQL.
 
 ### Steps to create required DB in Mysql workbench
 
-CREATE DATABASE users;
+`CREATE DATABASE users;
 
 USE DATABASE users;
 
@@ -26,4 +26,4 @@ lastName varchar(255),
 email varchar(255),
 saltedPassword varchar(255),
 salt varchar(255)
-);
+);`

@@ -2,13 +2,13 @@ import express from "express";
 import * as EmailValidator from "email-validator";
 import saltHash from "password-salt-and-hash";
 
-var cors = require("cors");
+const cors = require("cors");
 
-var passwordValidator = require("password-validator");
+const passwordValidator = require("password-validator");
 
-var bodyParser = require("body-parser");
+const bodyParser = require("body-parser");
 
-var mysql = require("mysql");
+const mysql = require("mysql");
 
 // Create connection to mysql
 var connection = mysql.createConnection({

@@ -64,7 +64,7 @@ const SigninForm = ({ changeAuthForm, handleScreen }: SigninFormProps) => {
         .then(handleScreen)
         .catch((err: Error) => alert(err));
     }
-  }, [signinData]);
+  }, [signinData, handleScreen]);
 
   return (
     <div className="signin-form">

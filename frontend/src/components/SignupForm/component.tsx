@@ -76,7 +76,7 @@ const SignupForm = ({ changeAuthForm }: SignupFormProps) => {
         })
         .catch((err: Error) => alert(err));
     }
-  }, [signupData]);
+  }, [signupData, changeAuthForm]);
 
   return (
     <div className="signup-form">

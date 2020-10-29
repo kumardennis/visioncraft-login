@@ -59,10 +59,10 @@ const SigninForm = ({ changeAuthForm, handleScreen }: SigninFormProps) => {
       })
         .then((response) => response.json())
         .then((data: Response) =>
-          alert(data.message + " Click 'Okay' to continue!")
+          alert(data.message + " Click 'Okay' to continue!") // TODO: add Toastify
         )
         .then(handleScreen)
-        .catch((err: Error) => alert(err));
+        .catch((err: Error) => alert(err)); // TODO: add Toastify
     }
   }, [signinData, handleScreen]);
 

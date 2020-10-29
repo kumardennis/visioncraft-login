@@ -71,10 +71,10 @@ const SignupForm = ({ changeAuthForm }: SignupFormProps) => {
       })
         .then((response) => response.json())
         .then((data: Response) => {
-          alert(data.message);
+          alert(data.message); // TODO: add Toastify
           data.type === "success" && changeAuthForm();
         })
-        .catch((err: Error) => alert(err));
+        .catch((err: Error) => alert(err)); // TODO: add Toastify
     }
   }, [signupData, changeAuthForm]);
 
